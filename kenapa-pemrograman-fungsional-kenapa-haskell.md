@@ -59,3 +59,35 @@ Bahkan cara dimana kita mengevaluasi ekspresi berbeda dalam Haskell.
 Kita menunda setiap komputasi sampai hasilnya benar-benar dibutuhkan.
 Haskell adalah bahasa yang *malas*.
 Kemalasan bukan hanya soal memindahkan-mindahkan pekerjaan: ini sangat mempengaruhi bagaimana kita menulis program.
+
+### Power
+
+Sepanjang buku ini, kami akan menunjukkan cara alternatif Haskell terhadap fitur dari bahasa pemrograman tradisional yang powerful, fleksibel, dan menuntun pada kode yang dapat diandalkan.
+Haskell secara positif dijejali dengan ide-ide mutakhir tentang bagaimana membuat perangkat lunak yang luar biasa.
+
+Karena kode murni tida memiliki hubungan dengan dunia luar, dan data dimana ia bekerja tidah pernah diubah, jenis kejutan jahat yang pada penggalan kode secara tak nampak merusak data yang digunakan orang lain sangatlah jarang.
+Apapun konteks yang fungsi murni gunakan, ini akan berperilaku secara konsisten.
+
+Kode murni lebih mudah untuk diuji daripada kode yang berhubungan dengan dunia luar.
+Ketika suatu fungsi hanya merespon pada inputnya yang nampak, kita dapat dengan mudah menyebutkan sifat yang mestinya selalu benar.
+Kita dapat secara otomatis menguji apakah sifat tersebut terpenuhi untuk sejumlah besar input acak, dan ketika lulus uji tes tersebut, kita move on.
+Kita masih menggunakan teknik tradisional untuk mengji kode yang berinteraksi dengan berkas, jaringan, atau perangkat keras eksotis.
+Karena ada jauh lebih sedikit kode yang tak murni ini dibandingkan yang kita temui di bahasa tradisional, kita memperoleh lebih banyak jaminan bahwa perangkat lunak kita cukup solid.
+
+Evaluasi malas memiliki beberapa efek menakutkan.
+Katakanlah kita ingin menemukan k-elemen terkecil dari suatu list yang tak terurut.
+Di bahasa pemrograman tradisional, pendekatan yang paling jelas adalah mengurutkan list tersebut dan mengambil k elemen pertama, tetapi hal ini sangatlah mahal.
+Untuk efisiensi, kita alih-alih menulis fungsi spesial yang mengambil nilai ini dalam satu kali kerja, dan fungsi tersebut harus melakukan pembukuan yang lumayan kompleks.
+Di Haskell, pendekatan-urutkan-lalu-ambil sebenarnya bekinerja dengan cukup baik: kemalasan menjaimn bahwa list tersebut akan diurutkan secara cukup untuk menemukan k-unsur minimal.
+
+Lebih baik lagi, kode Haskell yang beroperasi secara efisien tersebut sangat kecil, dan hanya menggunakan pustaka standar.
+
+```haskell
+-- berkas: ch00/KMinima.hs
+-- baris yang dimulai dengna "--" adalah komentar.
+
+minima k xs = take k (sort xs)
+```
+Hal ini memakan waktu yang cukup lama guna mengembangkan nuansa intuitif bahwa evaluasi malas amatlah penting, kode yang dihasilkan lebih bersih, singkat, dan efisien.
+
+Layaknya contoh diatas, aspek penting pada kekuatan Haskell
