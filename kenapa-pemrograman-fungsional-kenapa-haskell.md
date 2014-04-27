@@ -90,4 +90,62 @@ minima k xs = take k (sort xs)
 ```
 Hal ini memakan waktu yang cukup lama guna mengembangkan nuansa intuitif bahwa evaluasi malas amatlah penting, kode yang dihasilkan lebih bersih, singkat, dan efisien.
 
-Layaknya contoh diatas, aspek penting pada kekuatan Haskell
+Layaknya contoh diatas, aspek penting pada kekuatan Haskell berada pada kekompakan dari kode yang kita tulis.
+Dibandingkan dengan bekerja dalam bahasa tradisional populer, ketika kita mengembangkan program di Haskell kita sering kali menulis lebih sedikit kode, yang secara substansial leibh sedikit waktu, dan lebih sedikit bug.
+
+### Kenikmatan
+
+
+Kami percaya bahwa  memulai dasar pemrograman Haskell adalah hal mudah, dan kalian akan dapat dengan sukses menulis program kecil kalian dalam hitungan jam atau hari.
+
+Karena pemrograman yang afektif di Haskell sangatlah berbeda dari bahasa yang lain, kalian bisa menduga bahwa menguasai keduanya, bahasa dan teknik pemrograman fungsional, membutuhkan banyak pemikiran dan praktik.
+
+Menilik kembali ke hari-hari memulai Haskell, kabar baiknya adalah kesenangan dimulai dari awal: Mendalami bahasa baru lumayan menghibur dan menantang, dimana banyak ide umum yang berbeda atau menghilang, dan untuk mencari tahu bagaimana menulis program sederhana.
+
+Bagi kami, kesenangan awal berlangsung selama pengalman tadi tumbuh dan pemahaman kita diperdalam.
+Di bahasa lainnya, sangatlah sulit melihat hubungan antara ilmu pengetahuan dan kacang-dan-baut-nya pemrograman. Di Haskell, kita mengimpor beberapa ide dari matematika abstrak dan membuatnya bekerja.
+Lebih baik lagi, kita menemukan bahwa ide tersebut tidak hanya mudah untuk dipelajari, mereka juga memiliki hasil yang praktis untuk membantu kita menulis kode yang kompak, dan mudah digunakan kembali.
+
+Selain itu, kita tidak akan menempatkan "dinding bata" manapun di jalan kalian: tidak ada teknik yang sulit atau mengerikan dalam buku ini yang harus kalian kuasai agar bisa membuat program secara efektif.
+
+Seperti yang sudah dikatakan, Haskell merupakan bahasa yang ketat: ia akan membuat kalian lebih berpikir di depan. Hal ini mungkin akan memakan cukup waktu untuk menyesuaikan debugging banyak kode kalian sebelum menjalankannya, dari respon compiler yang memberitahu kalain bahwa sesuatu di program kalian tak masuk akal. Bahkan dengan pengalaman bertahun-tahun, kami sangat terkagum-kagum dan lega dengan seringnya program Haskell kami yang langsung bekerja pada percobaan pertama, setelah kami perbaiki kompilasi eror tadi.
+
+## Apa yang diharapkan dari buku ini
+
+Kami memulai project ini karena semakin tumbuhnnya jumlah orang yang menggunakan Haskell untuk menyelesaikan masalah sehari-hari.
+Karena Haskell memiliki akar di akademia, beberapa buku Haskell yang ada fokus pada problem dan teknik dari pemrograman sehari-hari yang kami tertarik padanya.
+
+Dengan buku ini, kami ingin menunjukkan pada kalian bagaimana pemrograman fungsional dan Haskell menyelesaikan masalah nyata.
+Ini adalah buku praktik: setiap bab memiliki lusinan contoh kode, dan banyak yang memiliki aplikasi lengkap.
+Berikut adalah comboh dari pustaka, teknik, dan peralatan yang akan kita tunjukkan pada anda bagaimana mengembangkannya.
+
+- Membuat aplikasi yang mengunduh episode podcast dari internet dan menyimpannya history-nya di basis data SQL.
+- Mengji kode kalian dengan cara yang intuitif dan powerful. Menjelaskan sifat yang seharusnya benar, dan membiarkan pustaka QuickCheck menciptakan kasus ujinya secara otomatis.
+- Mengambil sejumlah foto kamera dari barcode, dan mengubahnya menjadi identifier yang dapat kalain gunakan untuk mengquery di perpustakaan atau web site penjual buku.
+- Menulis kode yang mengambil data dari web. Mentraksasikan data dengan server dan klien yang ditulis dalam bahasa lain menggunakan notasi JSON. Mengembangkan pengecek tautan konkuren.
+
+### Sedikit tentang anda
+
+Apa yang harus kalian tahu sebelum membaca buku ini?
+Kami menduga kalian sudah tahu bagaimana caranya untuk membuat program, tetapi jika kalian belum pernah menggunakan pemrograman fungsional, tak apa.
+
+Tak peduli apa level pengalaman kalian, kami mencoba untuk mengantisipasi kebutuhan kalian: kami bertindak ekstra untuk menjelaskan ide yang baru dan memiliki potensi menjadi rumit dengan mendalam, biasanya dengan contoh dan gambar untuk lebih memperjelas poinnya.
+
+Sebagai programer Haskell yang baru, kalian pasti akan memulai menulis cukup banyak kode dengan secara manual yang kalian bisa saja gunakan fungsi dalam suatu pustaka atau teknik pemrograman, jikalau kalian tahu keberadaannya.
+Kami mengemas buku ini dengan informasi untuk membantu kalian menemukannya secepat mungkin.
+
+Tentu saja, selalu saja akan ada tanjakan sepanjang jalan.
+Jika kita mulai mengantisipasi kejutan yang sesekali muncul atau kesulitan didalam hal-hal yang menyenangkan, kalian akan memiliki pengalaman terbaik.
+Celah yang kasar yang kalian temui tak akan berlangsung lama.
+
+Seiring dengan bertambahnya pengalaman kalian sebagai programer Haskell, cara kalian menulis kode akan berubah.
+Bahkan, selama kalian membaca buku ini, cara kami mempresentasikan kode akan berubah pula, seiring dengan kita mulai beranjak dari dasarnya bahasa ke teknik yang lebih powerful dan produktif.
+
+## Apa yang diharapkan dari Haskell
+
+Haskell adalah bahasa pemrograman *general purpose*.
+Ia didesain tanpa aplikasi sempt di pikiran.
+Meskipun ini membutuhkan pijakan yang kuat tentang bagaimana suatu program harus ditulis, ia tidak berpihak pada satu domain masalah ketimbang yang lain.
+
+Sementara pada intinya, bahasa ini mendorong style murni, malas dari pemrogrman fungsional, ini adalah *default*nya, bukan hanya pilihan.
+Haskell juga mendukung model yang lebih tradisional dari kode prosedural dan evaluasi *strict*. Sebagai tambahan, meskipun fokus dari bahasa ini sendiri adalah secara bulat menulis program *statycally typed*, tetap dimungkinkan untuk menulis kode Haskell dalam cara *dynamically typed*.
