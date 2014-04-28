@@ -149,3 +149,36 @@ Meskipun ini membutuhkan pijakan yang kuat tentang bagaimana suatu program harus
 
 Sementara pada intinya, bahasa ini mendorong style murni, malas dari pemrogrman fungsional, ini adalah *default*nya, bukan hanya pilihan.
 Haskell juga mendukung model yang lebih tradisional dari kode prosedural dan evaluasi *strict*. Sebagai tambahan, meskipun fokus dari bahasa ini sendiri adalah secara bulat menulis program *statycally typed*, tetap dimungkinkan untuk menulis kode Haskell dalam cara *dynamically typed*.
+
+### Dibandingkan dengan bahasa pemrograman statik tradisional
+
+Bahasa yang menggunakan static type system sedernaha telah menjadi andalan dari dunia pemrograman selama berdekade-dekade.
+Haskell adalah bahasa yang statically typed, tapi definisi dari apa itu type, dan apa yang bisa kita lakukannya padanya, lebih fleksibel dan powerful daripada bahasa tradisional. Tipe membuat kontribusi besar pada kesingkatan, kejelasan, dan efisiensi program Haskell.
+
+Meskipun powerful, tipe sistem Haskell seringkali tak menggangu anda. Jika kita menghilangkan type information eksplisit, Haskell compiler akan secara otomatis menyimpulkan tipe dari suatu ekspresi atau fungsi tersebut.
+Dibandingkan dengan bahasa statis tradisional, yang kita harus menyuapi sejumlah besar type information, kombinasi dari power dan penyimpulan dalam tipe sistem Haskell secara signifikan mengurangi kekacauan dan redudansi kode kita.
+
+Beberapa fitur lain dari Haskell yang digabungkan lebih jauh meningkatkan banyaknya pekerjaan yang muan dalam satu layar teks.
+Ini memberikan perbaikan dalam waktu pengembangan dan agilitas: kita dapat menciptakan kode yang handal secara cepat, dan dengan mudah me-refactor kode tersebut dalam merespon perubahan persyaratan.
+
+Kadang kala, program Haskell berjalan lebih lambat dari program yang sama yang ditulis di C atau C++.
+Untuk kebanyakan kode yang kita tulis, keunggulan Haskell pada produktivitas dan relibitas mengalahkan segala kekurangan dari performa yang kecil.
+
+Prosesor multicore sekarang dimana-mana, tetapi tetap saja sulit untuk membuat program untuk mereka dengan menggunakan teknik tradisional.
+Haskell memberikan teknologi yang unik untuk membuat pemrograman multicore lebih terjangkau.
+Haskell mensupport pemrograman paralel, sowftare transactional memory untuk konkurensi yang stabil, dan dan mampu berkembang ke ratusan ribu konkuren thread.
+
+### Dibandingkan dengan pemrograman dinamis modern
+
+Selama dekade terakhir, dynamically typed, intrerpreted languages semakin populer.
+Mereka biasanya menawarkan keuntungan substansial dalam produktivitas developer.
+Meskipun ini biasanya diiringi dengan performa program yang buruk, untuk banyak pekerjaan pemrograman produktivitas mengalahkan performa, atau performa tidaklah menjadi faktor yang signifikan pada kasus apapun.
+
+Kesingkatan adalah satu area dimana Haskell dan dynamically typed languages menampilkan secara sama: di tiap kasus, kita menulis lebih sedikit kode untuk menyelesaikan suatu masalah dibanding dengan bahasa tradisional.
+Program yang seringkali berada pada ukuran yang sama di dtl dan Haskell.
+
+Ketika menghiraukan performa runtime, Haskell hampir selalu memiliki keuntungan besar.
+Kode yang di compile dengan Glasgow Haskell Compiler (GHC) biasanya antara 20 sampai 60 kali lebih cepat daripada kode yang dijalankan melalui intrepreter bahasa dinamis. GHC juga menyediakan interpreter, jadi kalian dapat menjalankan script tanpa mengcompile mereka.
+
+Perbedaan besar antara bahasa bertipe dinamis dan Haskell terletah pada filosofi mereka antara tipe.
+Alasan besar dari popularitas bahasa bertime dinamis adalah jarang sekali kita memerlukan untuk secara eksplisit menyebutkan tipe. Melalui penyimpulan tipe otomatis, Haskell menawarkan keunggulan yang sama.
