@@ -182,3 +182,36 @@ Kode yang di compile dengan Glasgow Haskell Compiler (GHC) biasanya antara 20 sa
 
 Perbedaan besar antara bahasa bertipe dinamis dan Haskell terletah pada filosofi mereka antara tipe.
 Alasan besar dari popularitas bahasa bertime dinamis adalah jarang sekali kita memerlukan untuk secara eksplisit menyebutkan tipe. Melalui penyimpulan tipe otomatis, Haskell menawarkan keunggulan yang sama.
+
+Diluar kesamaan permukaan ini, perbedaannya lari dengan dalam. Di bahasa pemrograman bertipe dinamis, kita dapat menciptakan konstruk yang sulit untuk diekspresikan dalam bahasa statis.
+Namun, hal yang sama juga terjadi sebaliknya: dengan sistem tipe yang sepowerful Haskell, kita dapat menstruktur program dalam suatu cara yang mungkin tidak termanage atau tidak mudah di bahasa bertipe dinamis.
+
+Penting kiranya untuk mengenali bahwa tiap pendekatan tersebut memerlukan konsekuensinya masing-masing. Secara singkat, perspektif yang dimiliki Haskell menekankan pada keamanan, sedangkan bahasa bertipe dinamis mencari fleksibilitas.
+Jika seseorang telah menemukan suatu cara untuk memikirkan tipe yang merupakan paling baik, kami membayangkan bahwa tiap orang mungkin akan tahu tentangnya sekarang.
+
+Tentu saja, kami memiliki opini kami sendiri tentang tradeoff-nya lebih menguntungkan.
+Dua dari kami memiliki pengalaman pemrograman bertahun-tahun di bahasa bertipe dinamis.
+Kami cinta untuk bekerja dengan mereka; kami masih menggunakan mereka tiap hari; tapi kami biasanya lebih memilih Haskell.
+
+### Haskell di industri dan open source
+
+Berikut adalah beberapa contoh dari sistem software besar yang telah diciptakan di Haskell.
+Beberapa dari berikut open source, sedangkan yang lain adalah produk proprietary.
+
+- Software desain ASIC dan FPGA (Lava, produk dari Bluespec Inc.)
+- Software komposisi Musik (Haskore)
+- Kompiler dan tools compiler-related (terutama GHC)
+- Distributed revision control (Darcs)
+- Web middleware (HAppS, produk dari Galois Inc.)
+
+Berikut adalah contoh beberapa perusahaan yang menggunakan Haskell di akhir 2008, diambil dari Haskell wiki.
+
+- ABN AMRO adalah bank internasional. Mereka menggunakan Haskell di perbankan investasi, untuk mengukur dari resiko counterparty pada portofolio penurunan finansial.
+- Anygma adalah perusahaan startup. Mereka mengembangkan multimedia content creation tools menggunakan Haskell.
+- Amgen adalah perusahaan biotech. Mereka menciptakan model matematika dan aplikasi kompleks lain di Haskell.
+- Bluespec adalah ASIC dan FPGA desain software vendor. Produk mereka dikembangkan di Haskell, dan bahasa desain chip yang disediakan oleh produk mereka terpengaruh dari Haskell.
+- Eaton menggunakan Haskell untuk desain dan verifikasi sistem kendaraan Hidrolis hibrid.
+
+### Komilasi, debugging, dan analisa performa
+
+Untuk pekerjaan praktis,
